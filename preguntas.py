@@ -103,7 +103,7 @@ def pregunta_03():
             # Paso 3: Construya un modelo de regresión lineal.
             (
                 "lr",
-                LinearRegression(fit_intercept=False),
+                LinearRegression(),
             ),
         ],
     )
@@ -131,7 +131,7 @@ def pregunta_03():
 
     # Búsque la mejor combinación de regresores
     gridSearchCV.fit(X_train, y_train)
-
+  
     # Retorne el mejor modelo
     return gridSearchCV
 
